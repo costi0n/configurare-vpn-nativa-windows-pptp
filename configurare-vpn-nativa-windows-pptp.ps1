@@ -1,4 +1,31 @@
-﻿# Variabili di configurazione per la VPN
+﻿<#
+.SYNOPSIS
+    Questo script configura automaticamente una connessione VPN PPTP in Windows, crea uno script batch per la connessione e genera uno shortcut per l'esecuzione facilitata.
+
+.DESCRIPTION
+    Lo script PowerShell automatizza il processo di configurazione di una connessione VPN PPTP su sistemi Windows. Imposta i parametri della VPN, come l'indirizzo IP del server, il nome utente e la password. Inoltre, genera uno script batch per stabilire la connessione VPN e crea uno shortcut per eseguire lo script batch con privilegi elevati. Il tutto è volto a semplificare la gestione delle connessioni VPN in ambienti aziendali o personali.
+
+    Lo script include anche la configurazione delle rotte IP per garantire che il traffico verso determinati indirizzi IP venga indirizzato attraverso il gateway VPN.
+
+.EXAMPLE
+    PS> .\NomeScript.ps1
+    Questo comando esegue lo script e configura la connessione VPN con i parametri predefiniti nel codice.
+
+.NOTES
+    - È necessario eseguire lo script con privilegi di amministratore.
+    - Assicurarsi di modificare le variabili iniziali per adattarle alle proprie necessità.
+    - Lo script memorizza le credenziali in chiaro, quindi è importante gestirlo con adeguate misure di sicurezza.
+
+.COMPATIBILITY
+    Windows 10, Windows Server 2016
+
+.AUTHOR
+    Costinel Ghita
+    24/11/2023
+#>
+
+
+# Variabili di configurazione per la VPN
 $vpnServerIP = "1.2.3.4"
 $vpnName = "VPN_M2C"
 $vpnUsername = "vpnUs3r"
